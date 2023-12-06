@@ -22,15 +22,14 @@ Credentials:
 
 Access key ID
 Secret access key
-AKIAX22HJMU4CAXV5VOX
-f+2hn6eXGtTpDYSa1OKfUZLd2m1UTwRuOAshV8Ss
-
+      -- AKIAX22HJMU4CAXV5VOX
+      -- f+2hn6eXGtTpDYSa1OKfUZLd2m1UTwRuOAshV8Ss
+`
 
 
 
 
 Creating Docker image to replace the image container in Terraform Configuration file.
-Docker Image created:
 
 Containerized Application:
 Write the Code for Hello World.
@@ -76,3 +75,72 @@ docker tag hello-world-api:latest <account-id>.dkr.ecr.<region>.amazonaws.com/<r
 docker push <account-id>.dkr.ecr.<region>.amazonaws.com/<repository-name>:latest
 
 In Addition, the relevant commands configurations have been saved in folders.
+
+
+
+Deploying a Terraform infrastructure involves several steps to initialize the configuration, plan changes, and apply those changes to create or modify resources in your cloud provider. Below are the basic steps to deploy a Terraform infrastructure:
+
+    Install Terraform:
+        Ensure Terraform is installed on your machine. You can download the latest version from the official Terraform website: Terraform Downloads.
+
+    Create a Terraform Configuration:
+        Write your infrastructure code in a Terraform configuration file (e.g., main.tf). Define providers, resources, and any necessary variables or outputs.
+
+    Initialize the Configuration:
+        Open a terminal and navigate to the directory containing your Terraform configuration file.
+        Run the following command to initialize the configuration:
+
+        bash:
+
+    terraform init
+
+    This command downloads the necessary provider plugins and sets up the Terraform working directory.
+
+Plan Changes:
+
+    After initialization, run the following command to preview the changes Terraform will make to your infrastructure:
+
+    bash:
+
+    terraform plan
+
+    Review the output to ensure it matches your expectations. Terraform will display a summary of the actions it will take.
+
+Apply Changes:
+
+    If the plan looks correct, apply the changes to create or modify resources:
+
+    bash:
+
+    terraform apply
+
+    Terraform will prompt for confirmation. Type "yes" to proceed.
+    This command executes the planned changes and creates or updates resources.
+
+Verification (Optional):
+
+    After applying changes, verify that the infrastructure was created or modified as expected.
+    Use the cloud provider's console, CLI, or other tools to inspect the deployed resources.
+
+Destroy Resources (Optional):
+
+    If you want to destroy the created resources, run the following command:
+
+    bash:
+    
+    terraform destroy
+
+    Confirm the destruction by typing "yes" when prompted.
+    Be cautious with this step, especially in a production environment.
+
+Clean Up (Optional):
+
+    After destroying resources, you can clean up the Terraform working directory by running:
+
+    bash
+
+        terraform destroy -auto-approve
+
+        This will remove any residual state and leave the directory in a clean state.
+
+These steps provide a basic outline for deploying Terraform infrastructure. Customize the commands and configurations based on your specific needs. Always exercise caution, especially when applying changes to production environments.
