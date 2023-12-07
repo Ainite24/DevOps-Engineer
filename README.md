@@ -14,22 +14,17 @@ Logged in with my AWS account.
     • Configuring the AWS CLI.
 
 Installed the AWS CLI with Sudo apt install awscli command.
-Using the AWS Screen, navigate to the AWS IAM for creating the user group.		
+Using the AWS Screen, navigate to the AWS IAM to create the user group.		
 
 
 User Configured with the AWS CLI.
 Credentials:
 
-Access key ID
-Secret access key
-      -- AKIAX22HJMU4CAXV5VOX
-      -- f+2hn6eXGtTpDYSa1OKfUZLd2m1UTwRuOAshV8Ss
-`
+Access key ID:********
+Secret access key:**********
 
 
-
-
-Creating Docker image to replace the image container in Terraform Configuration file.
+Creating a Docker image to replace the image container in the Terraform Configuration file.
 
 Containerized Application:
 Write the Code for Hello World.
@@ -74,7 +69,7 @@ Containerized Application:
 docker tag hello-world-api:latest <account-id>.dkr.ecr.<region>.amazonaws.com/<repository-name>:latest
 docker push <account-id>.dkr.ecr.<region>.amazonaws.com/<repository-name>:latest
 
-In Addition, the relevant commands configurations have been saved in folders.
+In Addition, the relevant command configurations have been saved in folders.
 
 
 
@@ -84,7 +79,7 @@ Deploying a Terraform infrastructure involves several steps to initialize the co
         Ensure Terraform is installed on your machine. You can download the latest version from the official Terraform website: Terraform Downloads.
 
     Create a Terraform Configuration:
-        Write your infrastructure code in a Terraform configuration file (e.g., main.tf). Define providers, resources, and any necessary variables or outputs.
+        Write your infrastructure code in a Terraform configuration file (e.g., main. tf). Define providers, resources, and any necessary variables or outputs.
 
     Initialize the Configuration:
         Open a terminal and navigate to the directory containing your Terraform configuration file.
